@@ -1,0 +1,66 @@
+.body{
+    background-color: rgb(214, 213, 213);
+    margin: auto;
+    height:740px
+}.headerArranging{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 30px;
+    background-color: blue;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+.headerRightSectionArranging{
+    display: flex;
+    justify-content: space-between;
+    gap:25px;
+    padding-right:35px ;
+}
+.loginsection{
+    width: 23%;
+    margin: auto;
+    margin-top: 99px;
+    border: 1px solid gray;
+    padding: 25px;
+    border-radius: 8px;
+    height: 400px;
+    background-color: rgb(244, 243, 243);
+}
+.blogsheader{
+    font-size:38px;
+    font-weight: bold;
+}
+.headerdescription{
+    font-size: 20px;
+}
+.loginsectiponLoginheader{
+    font-size:38px;
+    color: rgb(0, 157, 255);
+    font-weight: bold;
+    text-align: center;
+}
+.inputtype{
+    /* padding: 10px; */
+    font-size: 17px;
+    font-weight: 600;
+}
+input{
+    padding: 10px;
+    border-radius: 8px;
+    border:1px solid gray;
+    width:94%;
+}
+.loginbutton{
+
+
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius:10px ;
+    color: white;
+    font-size:18px;
+
+}
