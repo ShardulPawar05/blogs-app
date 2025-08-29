@@ -10,7 +10,7 @@ function Dashboard(){
 
 
     return(
-        <div>
+        <div className="body">
              {/* header section start from here */}
         <div className=" headerArranging section">
             <div>Blogs</div>
@@ -24,7 +24,7 @@ function Dashboard(){
         {/*  dashboard section start from here */}
         <div className="dashBoardassection">
             <div className="blogsheader" >Blogs</div>
-            <div className="headerdescription" >Publish your passion,your way</div>
+            <div className="headerdescription" >Publish your passion,your way....</div>
             <hr/>
             {/* button section in daashboard */}
             <div className="buttonsoffooter">

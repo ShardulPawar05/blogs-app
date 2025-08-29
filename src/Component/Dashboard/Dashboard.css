@@ -1,3 +1,10 @@
+.body{
+    background-color:black;
+
+}
+.body{
+    background-color: green;
+}
 .headerArranging{
     display: flex;
     justify-content: space-between;
@@ -15,6 +22,7 @@
     padding: 25px;
     border: 1px solid gray;
      border-radius: 7px;
+     background-color: rgba(138, 137, 137, 0.816);
 
 
 

@@ -1,8 +1,4 @@
-.body{
-    background-color: rgb(214, 213, 213);
-    margin: auto;
-    height:740px
-}.headerArranging{
+.headerArranging{
     display: flex;
     justify-content: space-between;
     padding: 12px 30px;
@@ -11,12 +7,6 @@
     font-size: 25px;
     font-weight: bold;
     
-}
-.headerRightSectionArranging{
-    display: flex;
-    justify-content: space-between;
-    gap:25px;
-    padding-right:35px ;
 }
 .loginsection{
     width: 23%;
@@ -33,7 +23,7 @@
     font-weight: bold;
 }
 .headerdescription{
-    font-size: 18px;
+    font-size: 17px;
 }
 .loginsectiponLoginheader{
     font-size:38px;
@@ -62,5 +52,6 @@ input{
     border-radius:10px ;
     color: white;
     font-size:18px;
+    text-decoration: underline;
 
 }
