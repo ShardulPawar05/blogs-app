@@ -11,8 +11,8 @@ return(
         <div className=" headerArranging section">
             <div>Blogs</div>
             <div className="headerRightSectionArranging">
-                <div>Login</div>
-                <div>Register</div>
+                <div>ShardulPawar</div>
+                <div><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</div>
             </div>
 
         </div>
@@ -21,13 +21,17 @@ return(
 
 
 
-            < textarea className="textarea"placeholder='Title'></textarea>
+            <div>< textarea className="textarea"placeholder='Title'></textarea></div>
 
             <hr/>
-            <textarea rows={15} placeholder='Description'></textarea>
+            <div><textarea  placeholder='Description'></textarea></div>
+       
+        <div className='buttons'>
+            <div><button>Cancle</button></div>
+            <div><button>Save</button></div>
         </div>
 
-
+       </div>
 
     </div>
 );

@@ -1,5 +1,5 @@
 .bacckgrondColor{
-    background-color: rgb(142, 136, 128);
+    background-color: rgb(240, 240, 240);
     height:730px;
 
 
@@ -11,11 +11,14 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 30px;
-    background-color: rgb(13, 13, 40);
-    color: rgb(201, 190, 190);
+    background-color: rgb(0,0,102);
+    color: white;
     font-size: 25px;
     font-weight: bold;
     
+}
+.fa-solid{
+    padding: 0px 7px;
 }
 .headerRightSectionArranging{
     display: flex;
@@ -26,24 +29,52 @@
 .titlesection{
     width:70%;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 32px;
     padding: 20px;
     border-radius: 8px;
     border:1px solid;
+    
     background-color: white;
     
 }
 textarea{
+    resize: none;
+    
+    height: 255px;
     width:100%;
     border-radius:7px ;
     font-size: 25px;
     margin-top:25px;
+    background-color: rgb(255,255,255,);
 
 }
 .textarea{
+    height:70px;
+    width: 100%;
     border: none;
     font-size: 38px;
     font-weight: bold;
     letter-spacing: 0px;
+    background-color: rgb(255,255,255,);
+    
+
+}
+.buttons{
+         
+    display: flex;
+    margin-left: 82.5%;
+    
+    background-color:  white;
+    gap:20px;
+    
+}
+button{
+    padding: 10px 20px;
+    /* margin-right: 40px; */
+    border-radius: 7px;
+    border:none;
+    background-color:rgb(0,0,102) ;
+    color: white;
+    font-weight: bold;
 
 }
