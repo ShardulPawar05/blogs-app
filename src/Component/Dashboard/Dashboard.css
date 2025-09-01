@@ -1,15 +1,15 @@
-.body{
-    background-color:black;
+.bodydashboard{
+    background-color:rgb(214, 213, 213);
+    height: 730px;
 
 }
-.body{
-    background-color: green;
-}
-.headerArranging{
+
+
+.headerArrangingsection{
     display: flex;
     justify-content: space-between;
     padding: 12px 30px;
-    background-color: blue;
+    background-color: rgb(0,0,102);
     color: white;
     font-size: 25px;
     font-weight: bold;
@@ -22,7 +22,7 @@
     padding: 25px;
     border: 1px solid gray;
      border-radius: 7px;
-     background-color: rgba(138, 137, 137, 0.816);
+     background-color: rgba(255, 255, 255, 0.816);
 
 
 
@@ -44,17 +44,28 @@
     margin-left: 84%;
     gap: 15px;
     margin-top: 30px;
-    margin-bottom: 65px;
+    margin-bottom: 40px;
    
 
 }
-.buttons{
+.buttonsloginRegister{
+    margin-top: 10px;
     padding: 7px 15px;
     color: white;
-    background-color: rgb(46, 46, 230);
+    background-color: rgb(0,0,102);
     border-radius: 5px;
     border: none;
-    font-size: 18px;
+    font-size: 15px;
     
     
 }
+/* .buttonsRegister{
+    padding: 7px 15px;
+    color: white;
+    background-color: rgb(0,0,102);
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    
+
+} */

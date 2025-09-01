@@ -6,7 +6,7 @@ import Helloworld from './Component/Helloworld/Helloworld';
 import Login from './Component/Login/Login';
 import Register from './Component/Register/Register';
 import Title from './Component/Title/Title';
-
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
 function App() {
   return (
@@ -18,9 +18,24 @@ function App() {
      {/* my third Register screen */}
      {/* <Register/> */}
      {/* my fourth hello world logs screen */}
-     {/* <Helloworld/> */}
+     
+     <Router>
+      <Routes>
+        <Route path='/login' element={<Login/> }      />
+        <Route path='/register' element={<Register/> }      />
+        <Route path='/' element={<Dashboard/> }      />
+        <Route path='/title' element={<Helloworld/> }      />
+        <Route path='/blogs' element={<Title/> }      />
+     
+
+       
+      </Routes>
+     </Router>
      {/* my fifth title screen */}
-     <Title/>
+     {/* <Title/> */}
+     
+     
+     
      
 
     </div>

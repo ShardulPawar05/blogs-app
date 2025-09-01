@@ -21,14 +21,14 @@ return(
 
 
 
-            <div>< textarea className="textarea"placeholder='Title'></textarea></div>
+            <div>< input className="textareaoftitle"placeholder='Title'/></div>
 
             <hr/>
             <div><textarea  placeholder='Description'></textarea></div>
        
-        <div className='buttons'>
-            <div><button>Cancle</button></div>
-            <div><button>Save</button></div>
+        <div className='buttonsoftitlefooter'>
+            <div><button className='button'>Cancle</button></div>
+            <div><button className='button'>Save</button></div>
         </div>
 
        </div>

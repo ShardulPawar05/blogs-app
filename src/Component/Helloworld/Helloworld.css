@@ -2,15 +2,16 @@
 .bacgroundcolor{
 
     background-color: lightgray;
-}.headerArranging{
+    height: 730px;
+}.headerArrangingSection{
     display: flex;
     justify-content: space-between;
     padding: 12px 30px;
-    background-color: blue;
+    background-color: rgb(0,0,102);
     color: white;
-    font-size: 80px;
+    font-size: 28px;
     font-weight: bold;
-    align-items: center;
+   
 
     
 
@@ -18,8 +19,26 @@
 .headerRightSectionArranging{
 
     font-size: 15px;
+    /* background-color: ; */
+    align-items: center;
 }
- 
+.logoutbutton{
+     background-color: #191956;
+     /* padding: 10px 20px; */
+    /* margin-right: 40px; */
+    /* border-radius: 7px; */
+
+    border:none;
+    /* background-color:rgb(0,0,102) ; */
+    color: white;
+    font-weight: bold;
+}
+.title{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0px;
+    font-style:oblique;
+}
 .allDescriptionSection{
     width:75%;
     margin: auto;
@@ -28,6 +47,19 @@
     /* border-radius: 7px; */
     padding:25px;
     
+}
+.buttocreatenewpost{
+    padding: 10px 10px;
+    /* margin-right: 40px; */
+    border-radius: 7px;
+    border:none;
+    background-color:rgb(0,0,102) ;
+    color: rgb(255, 247, 247);
+    font-weight: bold;}
+.fa-solid{
+    color: white;
+    font-size: 14px;
+    /* background-color: white; */
 }
 .firstdescription{
     display: flex;
@@ -51,9 +83,56 @@
 .passage{
     line-height: 28px;
 }
-.buttonarrange{
-
-    margin-left: 87%;
+.buttonsfotter{
     margin-top: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
 
+button{
+    margin-left: 5px;
+    gap:50px;
+}
+.EditButton{
+    /* color; */padding: 10px 20px;
+    /* margin-right: 40px; */
+    border-radius: 7px;
+    border:none;
+    /* background-color:rgb(0,0,102) ; */
+    color: white;
+    font-weight: bold;
+    background-color:gray;
+}
+.deletebutton{
+    padding: 10px 20px;
+    /* margin-right: 40px; */
+    border-radius: 7px;
+    border:none;
+    /* background-color:rgb(0,0,102) ; */
+    color: white;
+    font-weight: bold;
+    background-color: rgb(221, 7, 7);
+}
+.likebutton{
+    padding: 10px 20px;
+    /* margin-right: 40px; */
+    border-radius: 7px;
+    border:none;
+    /* background-color:rgb(0,0,102) ; */
+    color: white;
+    font-weight: bold;
+    background-color: rgb(239, 95, 52);
+    /* font-size: 20px; */
+
+}
+.dislikebutton{
+    padding: 10px 20px;
+    /* margin-right: 40px; */
+    border-radius: 7px;
+    border:none;
+    /* background-color:rgb(0,0,102) ; */
+    color: white;
+    font-weight: bold;
+    background-color: rgb(27, 27, 3);
 }
