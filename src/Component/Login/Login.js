@@ -2,61 +2,71 @@
 
 import { useNavigate } from "react-router-dom";
 import "./Login.css"
+import { useState } from "react";
 
 
-function Login(){
+function Login() {
 
-const navigate=useNavigate();
-const navigateToLogin=()=>{
-    navigate("/login")
-}
-const navigateToRegister=()=>{
-    navigate("/register")
-}
-const navigateToDashboard=()=>{
-    navigate("/")
+    const navigate = useNavigate();
+    const navigateToLogin = () => {
+        navigate("/login")
+    }
+    const navigateToRegister = () => {
+        navigate("/register")
+    }
+    const navigateToDashboard = () => {
+        navigate("/")
 
-}
-const navigateToHelloworld=()=>{
-    navigate("/title")
-    
-}
+    }
+
+    const [userdata, setuserdata] = useState({ email: "", password: "" })
+    function handleLoginData() {
+        console.log(userdata)
+        navigate("/title")
+    }
+    function handleuseremail(event) {
+        let user = { ...userdata };
+        user["email"] = event.target.value
+        setuserdata(user)
+    }
+    function handleUserPAss(event) {
+        let user = { ...userdata };
+        user["password"] = event.target.value
+        setuserdata(user)
+    }
 
 
 
+    return (
+        <div className="body">
 
+            {/* header section start from here */}
+            <div className=" headerArrangingsection">
+                <div onClick={navigateToDashboard}>Blogs</div>
+                <div className="headerRightSectionArranging">
+                    <div onClick={navigateToLogin}>Login</div>
+                    <div onClick={navigateToRegister}>Register</div>
+                </div>
 
-
-return(
-    <div className="body">
-        
-        {/* header section start from here */}
-        <div className=" headerArrangingsection">
-            <div onClick={navigateToDashboard}>Blogs</div>
-            <div className="headerRightSectionArranging">
-                <div onClick={navigateToLogin}>Login</div>
-                <div onClick={navigateToRegister}>Register</div>
             </div>
+            {/* header section are complete */}
 
+            {/* main blogs screen stat from here */}
+
+            <div className="loginsection">
+                {/* main body of the login section */}
+                <div className="blogsheader">Blogs</div>
+                <div className="headerdescription">Publish your passion in your way......</div>
+                <hr />
+                <div className="loginsectiponLoginheaderLogin" >Login</div>
+                <div className="inputtype" >Email id</div>
+                <input type="text" placeholder="youermail.com" value={userdata.email} onChange={handleuseremail} className="logininput" />
+                <div className="inputtype"  >Password</div>
+                <input type="password" placeholder="pass@1234" value={userdata.password} onChange={handleUserPAss} className="logininput" /><br />
+                <button className="loginbuttons" onClick={handleLoginData}  >Login</button>
+
+            </div>
         </div>
-        {/* header section are complete */}
-
-        {/* main blogs screen stat from here */}
-
-        <div className="loginsection">
-            {/* main body of the login section */}
-            <div className="blogsheader">Blogs</div>
-            <div className="headerdescription">Publish your passion in your way......</div>
-            <hr/>
-            <div className="loginsectiponLoginheader" >Login</div>
-            <div className="inputtype">Email id</div>
-            <input type="text"placeholder="youermail.com" />
-            <div className="inputtype">Password</div>
-            <input type="text"placeholder="pass@1234"/><br/>
-            <button className="loginbutton"onClick={navigateToHelloworld} >Login</button>
-
-        </div>
-    </div>
-);
+    );
 }
 export default Login;

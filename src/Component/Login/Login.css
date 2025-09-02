@@ -26,7 +26,9 @@
     padding: 25px;
     border-radius: 8px;
     height: 400px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(246, 247, 249);
+    border: none;
+    box-shadow: 5px 5px 15px rgba(6,5,5,0.3);
 }
 .blogsheader{
     font-size:38px;
@@ -35,9 +37,9 @@
 .headerdescription{
     font-size: 18px;
 }
-.loginsectiponLoginheader{
+.loginsectiponLoginheaderLogin{
     font-size:38px;
-    color: rgb(0, 157, 255);
+    color: rgb(23, 21, 164);
     font-weight: bold;
     text-align: center;
 }
@@ -46,13 +48,14 @@
     font-size: 17px;
     font-weight: 600;
 }
-input{
+.logininput{
     padding: 10px;
+    border: none;
     border-radius: 8px;
-    border:1px solid gray;
+    /* border:1px solid gray; */
     width:94%;
 }
-.loginbutton{
+.loginbuttons{
 
 
     width: 100%;
@@ -61,6 +64,9 @@ input{
     margin-top: 10px;
     border-radius:10px ;
     color: white;
+    border: none;
     font-size:18px;
+    font-weight: bold;
+    text-decoration: none;
 
 }
