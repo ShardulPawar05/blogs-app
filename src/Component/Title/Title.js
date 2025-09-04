@@ -1,7 +1,26 @@
+import { useState } from 'react';
 import './Title.css';
+import { useNavigate } from 'react-router-dom';
 function Title(){
+const navigate=useNavigate();
+const[userblog,setuserblog]=useState({title:"",description:""});
 
+function handleSave(){
+    console.log(userblog)
+    navigate("/title")
 
+}
+
+function handleTitle(event){
+    let user={...userblog};
+    user["title"]=event.target.value;
+    setuserblog(user);
+}
+function handleDescription(event){
+    let user={...userblog};
+    user["description"]=event.target.value;
+    setuserblog(user);
+}
 
 return(
 
@@ -21,14 +40,14 @@ return(
 
 
 
-            <div>< input className="textareaoftitle"placeholder='Title'/></div>
+            <div>< input className="textareaoftitle"placeholder='Title' value={userblog.title} onChange={handleTitle}/></div>
 
             <hr/>
-            <div><textarea  placeholder='Description'></textarea></div>
+            <div><textarea  placeholder='Description' value={userblog.description} onChange={handleDescription}></textarea></div>
        
         <div className='buttonsoftitlefooter'>
             <div><button className='button'>Cancle</button></div>
-            <div><button className='button'>Save</button></div>
+            <div><button className='button' onClick={handleSave}>Save</button></div>
         </div>
 
        </div>

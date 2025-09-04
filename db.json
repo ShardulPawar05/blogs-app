@@ -1,0 +1,64 @@
+{
+  "user": [
+    {
+      "id": "e20b",
+      "userName": "shardul",
+      "email_id": "pawar",
+      "password": "1234"
+    },
+    {
+      "id": "0f28",
+      "userName": "shardul pawar",
+      "email_id": "shardul@gmail.com",
+      "password": "952755"
+    },
+    {
+      "id": "49d8",
+      "userName": "ishawari mam",
+      "email_id": "@1234",
+      "password": "1252"
+    },
+    {
+      "id": "3af4",
+      "userName": "nikita",
+      "email_id": "nikita@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "1169",
+      "userName": "sp",
+      "email_id": "xsp",
+      "password": "876287"
+    },
+    {
+      "id": "2f76",
+      "userName": "ssp",
+      "email_id": "pss",
+      "password": "p1234"
+    },
+    {
+      "id": "8314",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "6fa5",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "6d35",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "c79a",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    }
+  ]
+}
