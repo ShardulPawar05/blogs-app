@@ -14,15 +14,15 @@ function Register() {
        axios.post('http://localhost:3001/user', userDataofRegister)
       .then(response => {
         alert("Registration successful!");
-        alert("you are very smart")
-        navigate("/login");
+        
+        
       })
       .catch(error => {
 
           console.error("Registration failed:", error);
         // No alert for error
       });
-        navigate("/login")
+       navigate("/title"); 
 
     }
     function handleUserName(event) {

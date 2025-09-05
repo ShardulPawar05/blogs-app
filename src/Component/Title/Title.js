@@ -1,12 +1,20 @@
+import axios from 'axios';
 import { useState } from 'react';
 import './Title.css';
 import { useNavigate } from 'react-router-dom';
+// import moment from 'moment';
 function Title(){
 const navigate=useNavigate();
 const[userblog,setuserblog]=useState({title:"",description:""});
 
+// function to handle save buutoon to save dATA INTO Json file
+// function clockmoment(){
+//     const[currentTime,setcuurrentTime]=useState((moment))
+
+// }
 function handleSave(){
     console.log(userblog)
+    axios.post('http://localhost:3001/blogs',userblog)
     navigate("/title")
 
 }

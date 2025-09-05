@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import "./Helloworld.css"
 import Title from "../Title/Title";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 function Helloworld() {
 
     const[like, setlike]=useState(0);
     const[dislike,setdislike]=useState(0);
-
+    const [blogs, setBlogs] = useState([]);
 
     function handlelike(){
         setlike(like+1 )
@@ -20,16 +21,29 @@ function Helloworld() {
     const navigaToCreatePost=()=>{
     navigate("/blogs")
 }
+    
 
     // const[description,setdescription]=useState();
-    const blogsInfo = [
-        {
-            Title: "Hello world",
-            Created_by: "shardul pawar",
-            Created_At: "29 Aug 2025",
-            Description: "Medium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduce  Medium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduce"
-        }
-    ]
+   
+    // function handleblogs(){
+    //     axios.get("http://localhost:3001/blogs/09f8")
+    //     .then(Response=>{
+    //         alert("blogs")
+    //     })
+    //     .catch(error=>{
+    //         console.error("fail!!",error)
+    //     })
+    // }
+    useEffect(() => {
+        axios.get("http://localhost:3001/blogs")
+            .then((response) => {
+                setBlogs(response.data.blogs || response.data); // Adjust depending on API shape
+            })
+            .catch((error) => {
+                console.error("Error fetching blogs:", error);
+            });
+    }, []);
+
 
 
     return (
@@ -55,15 +69,16 @@ function Helloworld() {
                 <div className="firstDescriptiontext">Publish your passion,your way</div>
                 <hr />
                 {/* second Description section */}
-                {blogsInfo.map((single) => (
-                    <div className="secondDescription">
-                        <div className="title">{single.Title}</div>
-                        <div><strong>Created By:</strong><i>  {single.Created_by}</i></div>
-                        <div><strong>Created AT:</strong><i>  {single.Created_At}</i></div>
+                {blogs.map((blog) => (
+                    <div className="secondDescription" key={blog.id}>
+                        <div className="title">{blog.title }</div>
+                        <div><strong>Created By:</strong>{blog.Created_by}<i> </i></div>
+                        <div><strong>Created AT:</strong><i>{blog.Created_At} </i></div>
                         <hr/>
 
                         <div className="passage">
-                            {single.Description}
+                            {blog.description}
+                            
 
                         </div>
                         <div className="buttonsfotter">
@@ -92,6 +107,12 @@ function Helloworld() {
             </div> */}
 
             </div>
+
+            {/* <div>{axios.get("http://localhost:3001/blogs/09f8")}</div> */}
+{/* 
+            {blogs.map((singleelmentOfBlog)=>(
+                <div>{singleelmentOfBlog.title}</div>
+            ))} */}
             {/* <div>{descript</div> */}
         </div>
     );
