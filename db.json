@@ -1,102 +1,13 @@
 {
   "user": [
     {
-      "id": "e20b",
-      "userName": "shardul",
-      "email_id": "pawar",
-      "password": "1234"
-    },
-    {
-      "id": "0f28",
-      "userName": "shardul pawar",
-      "email_id": "shardul@gmail.com",
-      "password": "952755"
-    },
-    {
-      "id": "49d8",
-      "userName": "ishawari mam",
-      "email_id": "@1234",
-      "password": "1252"
-    },
-    {
-      "id": "3af4",
-      "userName": "nikita",
-      "email_id": "nikita@gmail.com",
-      "password": "123"
-    },
-    {
-      "id": "1169",
-      "userName": "sp",
-      "email_id": "xsp",
-      "password": "876287"
-    },
-    {
-      "id": "2f76",
-      "userName": "ssp",
-      "email_id": "pss",
-      "password": "p1234"
-    },
-    {
-      "id": "8314",
-      "userName": "",
-      "email_id": "",
-      "password": ""
-    },
-    {
-      "id": "6fa5",
-      "userName": "",
-      "email_id": "",
-      "password": ""
-    },
-    {
-      "id": "6d35",
-      "userName": "",
-      "email_id": "",
-      "password": ""
-    },
-    {
-      "id": "c79a",
-      "userName": "",
-      "email_id": "",
-      "password": ""
-    },
-    {
-      "id": "0410",
-      "userName": "",
-      "email_id": "",
-      "password": ""
-    },
-    {
-      "id": "109c",
-      "userName": "gaurav pawar",
-      "email_id": "gaurav@email",
-      "password": "pas123"
-    },
-    {
-      "id": "7555",
-      "userName": "",
-      "email_id": "",
-      "password": ""
+      "id": "74b0",
+      "userName": "omkar kurkute",
+      "email_id": "shardul123@.com",
+      "password": "pass425"
     }
   ],
   "blogs": [
-    {
-      "Title": "Hello world",
-      "Created_by": "shardul pawar",
-      "Created_At": "29 Aug 2025",
-      "description": "Medium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduce  Medium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduceMedium is a home for human stories and ideas. Here, anyone can share knowledge and wisdom with the world—without<br/> hello ecryone im exited to introduce",
-      "id": "9a54"
-    },
-    {
-      "id": "17c0",
-      "title": "My first blog",
-      "description": "hello everyone wellcome in my first blog"
-    },
-    {
-      "id": "e59e",
-      "title": "Shardul pawar",
-      "description": "hi friends"
-    },
     {
       "id": "92ad",
       "title": "sp",
@@ -106,6 +17,11 @@
       "id": "5802",
       "title": "",
       "description": ""
+    },
+    {
+      "id": "dcb4",
+      "title": "ssds",
+      "description": "sdxsdx"
     }
   ]
 }

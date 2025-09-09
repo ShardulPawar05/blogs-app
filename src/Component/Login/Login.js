@@ -3,6 +3,7 @@
 import { useNavigate } from "react-router-dom";
 import "./Login.css"
 import { useState } from "react";
+import axios from "axios";
 
 
 function Login() {
@@ -20,10 +21,35 @@ function Login() {
     }
 
     const [userdata, setuserdata] = useState({ email: "", password: "" })
-    function handleLoginData() {
-        console.log(userdata)
-        navigate("/title")
+    function handleLogin() {
+        axios
+            .get("http://localhost:3001/user")
+            .then((response) => {
+                const users = response.data;
+                //  console.log(users)
+                users.map((singleUser) => {
+                    console.log("email",singleUser.email_id)
+                    console.log("password",singleUser.password)
+                    console.log('userdata: ', userdata);
+                    console.log('singleUser.email_id === userdata.email: ', singleUser.email_id === userdata.email);
+                    console.log('singleUser.password === userdata.password: ', singleUser.password === userdata.password);
+
+                    
+                    if (singleUser.email_id === userdata.email && singleUser.password === userdata.password) {
+                        alert("login succsefull")
+                        navigate("/title")
+                    }
+                    else {
+                        alert("Invalid email or password");
+
+                    }
+                })
+
+            });
+
+
     }
+
     function handleuseremail(event) {
         let user = { ...userdata };
         user["email"] = event.target.value
@@ -63,7 +89,7 @@ function Login() {
                 <input type="text" placeholder="youermail.com" value={userdata.email} onChange={handleuseremail} className="logininput" />
                 <div className="inputtype"  >Password</div>
                 <input type="password" placeholder="pass@1234" value={userdata.password} onChange={handleUserPAss} className="logininput" /><br />
-                <button className="loginbuttons" onClick={handleLoginData}  >Login</button>
+                <button className="loginbuttons" onClick={handleLogin}  >Login</button>
 
             </div>
         </div>

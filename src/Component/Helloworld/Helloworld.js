@@ -21,19 +21,21 @@ function Helloworld() {
     const navigaToCreatePost=()=>{
     navigate("/blogs")
 }
-    
-
-    // const[description,setdescription]=useState();
    
-    // function handleblogs(){
-    //     axios.get("http://localhost:3001/blogs/09f8")
-    //     .then(Response=>{
-    //         alert("blogs")
-    //     })
-    //     .catch(error=>{
-    //         console.error("fail!!",error)
-    //     })
-    // }
+  // Filter out the blog with matching id
+ function handleDelete(id) {
+  axios.delete(`http://localhost:3001/blogs/${id}`)
+    .then((response) => {
+        
+    })
+    .catch(error => {
+      console.error("Failed to delete blog:", error);
+    });
+}
+
+
+
+    
     useEffect(() => {
         axios.get("http://localhost:3001/blogs")
             .then((response) => {
@@ -90,30 +92,14 @@ function Helloworld() {
 
                             <div className="buttonarrange">
                                 <button className="EditButton">Edit<i class="fa-solid fa-file-pen"></i></button>
-                                <button className="deletebutton">Delete<i class="fa-solid fa-trash"></i></button>
+                                <button className="deletebutton" onClick={() => handleDelete(blog.id)} >Delete<i class="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
                     </div>))}
-                {/* third  Description section  */}
-                {/* <div className="secondDescription">
-                <div>Hello World</div>
-            <div><strong>Created By</strong><i>  shardulpawar@gmail.com</i></div>
-            <div><strong>Created at</strong><i>  29<sup>th</sup>Aug, 2025</i></div>
-            <hr/>
-            <div className="passage">my text start from here and end Medium is a home for human stories and ideas. Here,
-                 anyone can share knowledge and wisdom with the world—without having to build a mailing list or
-                  a following first. The internet is noisy and chaotic; Medium is quiet yet full of insight. It’s simple,
-                  beautifull collaborative, and helps you find the right readers for whatever you have to say. </div>
-            </div> */}
+              
 
             </div>
 
-            {/* <div>{axios.get("http://localhost:3001/blogs/09f8")}</div> */}
-{/* 
-            {blogs.map((singleelmentOfBlog)=>(
-                <div>{singleelmentOfBlog.title}</div>
-            ))} */}
-            {/* <div>{descript</div> */}
         </div>
     );
 }
