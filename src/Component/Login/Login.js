@@ -28,8 +28,7 @@ function Login() {
                 const users = response.data;
                 //  console.log(users)
                 users.map((singleUser) => {
-                    console.log("email",singleUser.email_id)
-                    console.log("password",singleUser.password)
+                    
                     console.log('userdata: ', userdata);
                     console.log('singleUser.email_id === userdata.email: ', singleUser.email_id === userdata.email);
                     console.log('singleUser.password === userdata.password: ', singleUser.password === userdata.password);

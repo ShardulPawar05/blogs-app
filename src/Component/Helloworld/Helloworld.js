@@ -23,28 +23,55 @@ function Helloworld() {
 }
    
   // Filter out the blog with matching id
- function handleDelete(id) {
-  axios.delete(`http://localhost:3001/blogs/${id}`)
-    .then((response) => {
-        
-    })
-    .catch(error => {
-      console.error("Failed to delete blog:", error);
-    });
-}
-
-
-
+//  function handleDelete(id) {
+//   axios.delete(`http://localhost:3001/blogs/${id}`)
+//     .then((response) => {
     
-    useEffect(() => {
-        axios.get("http://localhost:3001/blogs")
-            .then((response) => {
-                setBlogs(response.data.blogs || response.data); // Adjust depending on API shape
-            })
-            .catch((error) => {
-                console.error("Error fetching blogs:", error);
-            });
-    }, []);
+//     })
+//     .catch(error => {
+//       console.error("Failed to delete blog:", error);
+//     });
+// }
+
+
+  const getJsondata = () => {
+    axios
+      .get("http://localhost:3001/blogs")
+      .then((response) => {
+        setBlogs(response.data.blogs || response.data); 
+      })
+      .catch((error) => {
+        console.error("Error fetching blogs:", error);
+      });
+  };
+
+  
+  useEffect(() => {
+    getJsondata();
+  }, []);
+
+   handleDelete = (id) => {
+    axios
+      .delete(`http://localhost:3001/blogs/${id}`)
+      .then(() => {
+        // ✅ Call the same function after deletion
+        getJsondata();
+      })
+      .catch((err) => {
+        console.error("Failed to delete blog:", err);
+      });
+  };
+    
+    //  useEffect(() => {
+    //     axios.get("http://localhost:3001/blogs")
+    //         .then((response) => {
+    //             setBlogs(response.data.blogs || response.data); // Adjust depending on API shape
+    //         })
+    //         .catch((error) => {
+    //             console.error("Error fetching blogs:", error);
+    //         });
+    // }, []);
+
 
 
 
