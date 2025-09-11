@@ -5,13 +5,64 @@
       "userName": "omkar kurkute",
       "email_id": "shardul123@.com",
       "password": "pass425"
+    },
+    {
+      "id": "f275",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "c9a4",
+      "userName": "",
+      "email_id": "",
+      "password": ""
+    },
+    {
+      "id": "474a",
+      "userName": "Ayush Kanse",
+      "email_id": "Ayush@gmail.com",
+      "password": "pass123"
     }
   ],
   "blogs": [
     {
-      "id": "6e86",
+      "id": "6367",
+      "title": "Hello Shardul2",
+      "description": "Hello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello ShardulHello Shardul\n\n\n\nlast line",
+      "like": 24,
+      "dislike": 11
+    },
+    {
+      "id": "a56c",
+      "title": "SHarDul",
+      "description": "नमस्कार,  \nमाझं नाव शार्दूल आहे. मी पुण्यात राहतो. सध्या मी __MIT_ कॉलेजमध्ये ___ वर्षाला शिक्षण घेत आहे. मला संगणक, प्रोग्रामिंग आणि नवीन तंत्रज्ञान शिकायला खूप आवडतं.  \nमाझा आवडता छंद वाचन आणि क्रिकेट खेळणे आहे. भविष्यामध्ये मी एक चांगला सॉफ्टवेअर इंजिनियर व्हायचं स्वप्न बघतो.  \nधन्यवाद!\nनमस्कार,  \nमाझं नाव शार्दूल आहे. मी एक सॉफ्टवेअर डेव्हलपर आहे आणि मला IT क्षेत्रात काम करण्याचा २ वर्षांचा अनुभव आहे. सध्या मी ReactJS, Node.js आणि Frontend Development वर काम करत आहे.  \nमाझी कामातली आवड म्हणजे नवनवीन तंत्रज्ञान शिकणं आणि त्याचा वापर करून स्मार्ट सोल्यूशन्स तयार करणं.  \nमाझे छंद म्हणजे संगीत ऐकणं आणि नवीन ठिकाणी फिरायला जाणं.  \nधन्यवाद!\n",
+      "dislike": 11,
+      "like": 212
+    },
+    {
+      "id": "ab8d",
+      "title": "pawar",
+      "description": "hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul vvhello shardul hello shardul vvvhello shardul hello shardul hello shardul vhello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul hello shardul ",
+      "like": 27,
+      "dislike": 8
+    },
+    {
+      "id": "f5ba",
+      "title": "sp",
+      "description": "shardu;"
+    },
+    {
+      "id": "0ceb",
+      "title": "sdsfghjukilo",
+      "description": "dfvbtnhyu",
+      "like": 16,
+      "dislike": 5
+    },
+    {
+      "id": "caf1",
       "title": "shardul",
-      "description": "AD rutuja"
+      "description": "sssssssssssssssssssssssssssssssssssssssssssssssssssssppppppppppppppppppppppppppppppppppppppppppppppppsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
     }
   ]
 }

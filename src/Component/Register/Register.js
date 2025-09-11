@@ -14,7 +14,7 @@ function Register() {
        axios.post('http://localhost:3001/user', userDataofRegister)
       .then(response => {
         alert("Registration successful!");
-        
+          navigate("/title"); 
         
       })
       .catch(error => {
@@ -22,7 +22,7 @@ function Register() {
           console.error("Registration failed:", error);
         // No alert for error
       });
-       navigate("/title"); 
+     
 
     }
     function handleUserName(event) {
@@ -82,25 +82,7 @@ function Register() {
 
             </div>
 
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
-
-    );
+  );
 }
 export default Register;

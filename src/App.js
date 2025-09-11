@@ -25,7 +25,7 @@ function App() {
         <Route path='/register' element={<Register/> }      />
         <Route path='/' element={<Dashboard/> }      />
         <Route path='/title' element={<Helloworld/> }      />
-        <Route path='/blogs' element={<Title/> }      />
+        <Route path='/blogs/:id?' element={<Title/> }      />
      
 
        

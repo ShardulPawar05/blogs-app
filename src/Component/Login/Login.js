@@ -39,7 +39,7 @@ function Login() {
                         navigate("/title")
                     }
                     else {
-                        alert("Invalid email or password");
+                        // ("Invalid email or password");
 
                     }
                 })

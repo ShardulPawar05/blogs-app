@@ -5,73 +5,80 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function Helloworld() {
 
-    const[like, setlike]=useState(0);
-    const[dislike,setdislike]=useState(0);
+    // const[like, setlike]=useState(0);
+    // const[dislike,setdislike]=useState(0);
     const [blogs, setBlogs] = useState([]);
 
-    function handlelike(){
-        setlike(like+1 )
-    }
-    function handledislike(){
-        setdislike(dislike+1);
-        setlike(like-1);
-    }
+    // function handlelike(){
+    //     setlike(like+1 )
+    // }
+    // function handledislike(){
+    //     setdislike(dislike+1);
+    //     setlike(like-1);
+    // }
+    const handleLike = (id, currentLike) => {
+    const updatedLike = currentLike + 1;
+    axios
+    .patch(`http://localhost:3001/blogs/${id}`, { like: updatedLike })
+    .then(() => {
+      getJsondata()
+      
+    })
+    .catch(err => console.error("Failed to update like:", err));
+};
+
+const handleDislike = (id, currentDislike) => {
+  const updatedDislike = currentDislike + 1;
+  axios.patch(`http://localhost:3001/blogs/${id}`, { dislike: updatedDislike })
+    .then(() => {
+      getJsondata()
+    })
+    .catch(err => console.error("Failed to update dislike:", err));
+};
+
 
     const navigate=useNavigate();
     const navigaToCreatePost=()=>{
     navigate("/blogs")
 }
    
-  // Filter out the blog with matching id
-//  function handleDelete(id) {
-//   axios.delete(`http://localhost:3001/blogs/${id}`)
-//     .then((response) => {
-    
-//     })
-//     .catch(error => {
-//       console.error("Failed to delete blog:", error);
-//     });
-// }
+// creating function for get data after delting the blog on blog page to show on blog page
 
 
   const getJsondata = () => {
     axios
       .get("http://localhost:3001/blogs")
       .then((response) => {
-        setBlogs(response.data.blogs || response.data); 
+        setBlogs( response.data); 
       })
       .catch((error) => {
         console.error("Error fetching blogs:", error);
       });
   };
-
+// creating a function of useEffect because refresh the page after clicking of button
   
   useEffect(() => {
     getJsondata();
   }, []);
 
-   handleDelete = (id) => {
+  // create the function for handle delete button for delete blog on blog page
+   const handleDelete = (id) => {
     axios
       .delete(`http://localhost:3001/blogs/${id}`)
       .then(() => {
-        // ✅ Call the same function after deletion
+        // ✅ Call the same function after deletion for getting 
         getJsondata();
       })
       .catch((err) => {
         console.error("Failed to delete blog:", err);
       });
   };
-    
-    //  useEffect(() => {
-    //     axios.get("http://localhost:3001/blogs")
-    //         .then((response) => {
-    //             setBlogs(response.data.blogs || response.data); // Adjust depending on API shape
-    //         })
-    //         .catch((error) => {
-    //             console.error("Error fetching blogs:", error);
-    //         });
-    // }, []);
 
+  // create function for editing the data of the blog;
+    
+   const handleEdit=(id)=>{
+    navigate(`/blogs/${id}`)
+   }
 
 
 
@@ -83,7 +90,7 @@ function Helloworld() {
                 <div>Blogs</div>
                 <div className="headerRightSectionArranging">
                     <div>Shardul pawar</div>
-                    <button className="logoutbutton"><i class="fa-solid fa-right-from-bracket"></i>Logout</button>
+                    <button className="logoutbutton"><i className="fa-solid fa-right-from-bracket"></i>Logout</button>
                 </div>
 
             </div>
@@ -93,7 +100,7 @@ function Helloworld() {
                 {/* first main section description */}
                 <div className="firstdescription">
                     <div>Blogs</div>
-                    <button className="buttocreatenewpost" onClick={navigaToCreatePost}><i class="fa-solid fa-circle-plus"></i>Create new post</button>
+                    <button className="buttocreatenewpost" onClick={navigaToCreatePost}><i className="fa-solid fa-circle-plus"></i>Create new post</button>
                 </div>
                 <div className="firstDescriptiontext">Publish your passion,your way</div>
                 <hr />
@@ -112,14 +119,14 @@ function Helloworld() {
                         </div>
                         <div className="buttonsfotter">
                             <div className="buttonArrangingleftSide">
-                                <button className="likebutton" onClick={handlelike}><i class="fa-solid fa-thumbs-up"></i>{like}</button>
-                                <button className="dislikebutton" onClick={handledislike} ><i class="fa-solid fa-thumbs-down"></i>{dislike}</button>
+                                <button className="likebutton"  onClick={() => handleLike(blog.id, blog.like || 0)}><i className="fa-solid fa-thumbs-up"></i> {blog.like || 0}</button>
+                                <button className="dislikebutton"onClick={() => handleDislike(blog.id, blog.dislike || 0)} ><i className="fa-solid fa-thumbs-down"></i>{blog.dislike || 0}</button>
                             </div>
 
 
                             <div className="buttonarrange">
-                                <button className="EditButton">Edit<i class="fa-solid fa-file-pen"></i></button>
-                                <button className="deletebutton" onClick={() => handleDelete(blog.id)} >Delete<i class="fa-solid fa-trash"></i></button>
+                                <button className="EditButton" onClick={() => handleEdit(blog.id)}>Edit<i className="fa-solid fa-file-pen"></i></button>
+                                <button className="deletebutton" onClick={() => handleDelete(blog.id)} >Delete<i className="fa-solid fa-trash"></i></button>
                             </div>
                         </div>
                     </div>))}

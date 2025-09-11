@@ -1,23 +1,39 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import './Title.css';
 import { useNavigate } from 'react-router-dom';
 // import moment from 'moment';
 function Title(){
 const navigate=useNavigate();
+const {id}=useParams();
 const[userblog,setuserblog]=useState({title:"",description:""});
 
-// function to handle save buutoon to save dATA INTO Json file
-// function clockmoment(){
-//     const[currentTime,setcuurrentTime]=useState((moment))
 
-// }
-function handleSave(){
-    console.log(userblog)
-    axios.post('http://localhost:3001/blogs',userblog)
-    navigate("/title")
 
+
+function handleSave() {
+  if (id) {
+    
+    axios.put(`http://localhost:3001/blogs/${id}`, userblog)
+      .then(() => {
+        navigate("/title");
+      })
+      .catch(error => {
+        console.error("Error updating blog:", error);
+      });
+  } else {
+    // Create new blog using POST
+    axios.post('http://localhost:3001/blogs', userblog)
+      .then(() => {
+        navigate("/title");
+      })
+      .catch(error => {
+        console.error("Error creating blog:", error);
+      });
+  }
 }
+
 
 function handleTitle(event){
     let user={...userblog};
@@ -29,6 +45,23 @@ function handleDescription(event){
     user["description"]=event.target.value;
     setuserblog(user);
 }
+
+    useEffect(()=>{
+        if (id){
+            axios.get(`http://localhost:3001/blogs/${id}`)
+            .then(Response => {
+                setuserblog(Response.data);
+
+            })
+            .catch(error=>{
+                        console.error("id not found");
+                        
+
+            });
+ }
+},[id] )
+        
+    
 
 return(
 
