@@ -8,11 +8,24 @@ function Title(){
 const navigate=useNavigate();
 const {id}=useParams();
 const[userblog,setuserblog]=useState({title:"",description:""});
+// create function for adding user whos create the blog
+// console.log(localStorage.getItem('useremail'))
 
+// useEffect((id)=>{
+//   const locallike=localStorage.getItem('useremail')
+//   console.log(locallike)
+//   axios
+//   .patch(`http://localhost:3001/blogs/${id}`,{created_by:locallike})
+//   .then(() => {
+    
+//   })
+
+// })
 
 
 
 function handleSave() {
+  const useremail=localStorage.getItem('useremail')
   if (id) {
     
     axios.put(`http://localhost:3001/blogs/${id}`, userblog)
@@ -24,8 +37,12 @@ function handleSave() {
       });
   } else {
     // Create new blog using POST
-    axios.post('http://localhost:3001/blogs', userblog)
+    // created_by:useremail;
+    axios.post('http://localhost:3001/blogs',
+      { ...userblog,
+      create_by:useremail})
       .then(() => {
+ 
         navigate("/title");
       })
       .catch(error => {
@@ -71,7 +88,7 @@ return(
         <div className=" headerArranging section">
             <div>Blogs</div>
             <div className="headerRightSectionArranging">
-                <div>ShardulPawar</div>
+                <div>{localStorage.getItem('username')}</div>
                 <div><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</div>
             </div>
 

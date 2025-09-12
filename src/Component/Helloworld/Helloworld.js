@@ -8,14 +8,21 @@ function Helloworld() {
     // const[like, setlike]=useState(0);
     // const[dislike,setdislike]=useState(0);
     const [blogs, setBlogs] = useState([]);
+    const[username,setusername]=useState();
+    // const[usereamil,setusereamil]=useState();
 
-    // function handlelike(){
-    //     setlike(like+1 )
-    // }
-    // function handledislike(){
-    //     setdislike(dislike+1);
-    //     setlike(like-1);
-    // }
+
+    // create this function for accept directly name for header
+    // useEffect(()=>{
+    //   const name= localStorage.getItem('username');
+    //   const user1=localStorage.getItem('useremail')
+    //   setusername(name)
+    //   setusereamil(user1)
+    // })
+    console.log(localStorage.getItem('username'))
+
+
+    // create this function for handle like buttons
     const handleLike = (id, currentLike) => {
     const updatedLike = currentLike + 1;
     axios
@@ -89,7 +96,7 @@ const handleDislike = (id, currentDislike) => {
             <div className=" headerArrangingSection">
                 <div>Blogs</div>
                 <div className="headerRightSectionArranging">
-                    <div>Shardul pawar</div>
+                    <div>{localStorage.getItem('username')}</div>
                     <button className="logoutbutton"><i className="fa-solid fa-right-from-bracket"></i>Logout</button>
                 </div>
 
@@ -108,7 +115,7 @@ const handleDislike = (id, currentDislike) => {
                 {blogs.map((blog) => (
                     <div className="secondDescription" key={blog.id}>
                         <div className="title">{blog.title }</div>
-                        <div><strong>Created By:</strong>{blog.Created_by}<i> </i></div>
+                        <div><strong>Created By:</strong><i>{blog.create_by} </i></div>
                         <div><strong>Created AT:</strong><i>{blog.Created_At} </i></div>
                         <hr/>
 

@@ -29,13 +29,17 @@ function Login() {
                 //  console.log(users)
                 users.map((singleUser) => {
                     
-                    console.log('userdata: ', userdata);
-                    console.log('singleUser.email_id === userdata.email: ', singleUser.email_id === userdata.email);
-                    console.log('singleUser.password === userdata.password: ', singleUser.password === userdata.password);
-
+                    // console.log('userdata: ', userdata);
+                    // console.log('singleUser.email_id === userdata.email: ', singleUser.email_id === userdata.email);
+                    // console.log('singleUser.password === userdata.password: ', singleUser.password === userdata.password);
+                    // console.log("pa",singleUser.userName)
                     
                     if (singleUser.email_id === userdata.email && singleUser.password === userdata.password) {
                         alert("login succsefull")
+                        // localStorage.setItem('key',singleUser.password)
+                        localStorage.setItem('username',singleUser.userName)
+                        localStorage.setItem('useremail',singleUser.email_id)
+                        console.log(localStorage.getItem('useremail'))
                         navigate("/title")
                     }
                     else {
@@ -48,6 +52,7 @@ function Login() {
 
 
     }
+
 
     function handleuseremail(event) {
         let user = { ...userdata };
